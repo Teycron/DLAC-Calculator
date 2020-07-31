@@ -44,7 +44,7 @@ FLOAT       {INTEGER}{SEPARATOR}{DIGIT}+
 "^"                         {
                                 return POW;
                             }
-"prime"                         {
+"prime"                     {
                                 return PRIME;
                             }
 "("                         {
@@ -57,9 +57,9 @@ FLOAT       {INTEGER}{SEPARATOR}{DIGIT}+
 [ \t]+	                    { 
                                 /* Do nothing at whitespace - eat it! */
                             }
-[\n]			     {
-				 return NL;
-			     }
+[\n]			    {
+				return NL;
+			    }
 "E"|"e"                         {
                                 printf("Exiting the calculator.\n"); 
                                 return 0;    
