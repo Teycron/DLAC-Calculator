@@ -3,7 +3,6 @@
 }
 
 %{ 
-   /* Definition section */
   #include <math.h>
   #include <stdio.h>
   #include "iostream"
@@ -33,8 +32,8 @@ line:
    ;
 
 result: 
-   expr {cout << "Result: "<< $1 << endl;}
-   ;
+    expr {cout << "Result: "<< $1 << endl;}
+    ;
 
 expr:   
     term1 |
@@ -79,24 +78,21 @@ negative:
     ;
 %% 
 
-//driver code 
 void  yyerror(char const *s) {
   printf("\n%s\n", s);
   exit(100);
 }
 
-int main(int argc, char** argv)
-  {
+int main(int argc, char** argv) {
     ++argv, --argc;
     if(argc > 0){
-
-      if( !(yyin = fopen(argv[0],"r")) ){
-       exit(255);
-     }
+        if( !(yyin = fopen(argv[0],"r")) ){
+            exit(255);
+        }
     }else{
     }
 
     yyparse();
 
     return 0;
-  }
+}
