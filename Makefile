@@ -12,7 +12,7 @@ clean:
 calc:
 	mkdir build
 	bison src/$(FILENAME).y -d -b build/$(FILENAME)
-	flex -o build/lex.yy.c src/calc.l
+	flex -o build/lex.yy.c src/$(FILENAME).l
 	$(CC) -o $(FILENAME) build/lex.yy.c build/$(FILENAME).tab.c $(LIB) -lfl
 
 test:
