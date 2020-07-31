@@ -60,7 +60,7 @@ FLOAT       {INTEGER}{SEPARATOR}{DIGIT}+
 [\n]			    {
 				return NL;
 			    }
-"E"|"e"                         {
+"E"|"e"                     {
                                 printf("Exiting the calculator.\n"); 
                                 return 0;    
                             }                               
