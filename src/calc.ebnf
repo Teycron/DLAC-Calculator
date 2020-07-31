@@ -1,0 +1,20 @@
+expr       = term1, {("+" | "-"), term1};
+term1      = term2, {("*" | "/" | "%"), term2};
+term2      = factor, {"^", factor};
+factor     = factor1 | "(", expr, ")";
+factor1    = positive | negative | prime;
+
+prime      = "prime(", number, ")";
+
+negative   = "-", positive;
+positive   = number, [float];
+
+float      = separator, digit, {digit};
+
+number     = zero | nonzero, {digit};
+zero       = "0";
+nonzero    = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+digit      = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"0";
+separator  = "," | ".";
+
+syntax     = expr;
