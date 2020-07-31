@@ -38,3 +38,6 @@ To use the calculator, start it with:
 After starting the calculater you can make different inputs.<br/>
 If your inputs are valid, the calculator will give you a computed output. Else the calculator will exit automatically.<br/>
 If you want to exit the calculator by a command, use 'e' or 'E' as input.
+
+### Valid Input
+If you don't know how a valid input looks like, take a look at the testfile with the [valid inputs](./testfiles/testfile_valid) and the one with the [invalid inputs](./testfiles/testfile_invalid).
