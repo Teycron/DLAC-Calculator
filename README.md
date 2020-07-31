@@ -40,4 +40,4 @@ If your inputs are valid, the calculator will give you a computed output. Else t
 If you want to exit the calculator by a command, use 'e' or 'E' as input.
 
 #### Input
-If you don't know how a valid input looks like, take a look at the testfile with the [valid inputs](./testfiles/testfile_valid) and the one with the [invalid inputs](./testfiles/testfile_invalid).
+If you don't know how a valid input looks like, take a look at the testfile with [valid inputs](./testfiles/testfile_valid) and the one with [invalid inputs](./testfiles/testfile_invalid).
